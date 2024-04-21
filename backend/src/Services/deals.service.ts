@@ -1,12 +1,12 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Deal } from 'src/Entities/deals';
+import Deals from 'src/Entities/Deals';
 
 import { Repository } from 'typeorm';
 
 export class DealsService {
   constructor(
-    @InjectRepository(Deal)
-    private dealsRepository: Repository<Deal>,
+    @InjectRepository(Deals)
+    private dealsRepository: Repository<Deals>,
   ) {}
 
   async getDeals() {
