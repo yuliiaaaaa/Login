@@ -12,11 +12,7 @@ import { Deal } from 'src/Entities/deals';
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         type: 'postgres',
-        host: configService.get<string>('POSTGRES_HOST'),
-        port: parseInt(configService.get<string>('POSTGRES_PORT')),
-        username: configService.get<string>('POSTGRES_USER'),
-        password: configService.get<string>('POSTGRES_PASSWORD'),
-        database: configService.get<string>('POSTGRES_DB'),
+        url: configService.get<string>('DB_URL'),
         entities: [User, Deal],
         synchronize: false,
         logging: false,
