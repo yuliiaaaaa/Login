@@ -1,0 +1,112 @@
+.homepage {
+  position: relative;
+  width: 100%;
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    @include onPhone {
+      font-size: 42px;
+      line-height: 60px;
+    }
+  }
+  &__description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    width: 822px;
+    @include onTablet {
+      width: 500px;
+    }
+
+    @include onPhone {
+      font-size: 20px;
+      width: 200px;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 176px;
+    z-index: 4;
+    height: 100%;
+    @include onTablet {
+      padding-inline: 20px;
+    }
+    @include onPhone {
+      padding-inline: 20px;
+    }
+  }
+  &__button {
+    border: 1px solid #ffffff;
+    width: 160px;
+    height: 54px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    @include hover(scale, 1.06);
+  }
+  &__main {
+    height: calc(100vh - 80px);
+    margin-bottom: 100px;
+    background-image: url('../../public/main-background.png');
+    background-position: center;
+    background-size: cover;
+  }
+  &__open-deals-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    color: $color-button;
+    margin-bottom: 20px;
+
+    @include onPhone {
+      text-align: center;
+    }
+
+    @include onTablet {
+      text-align: center;
+    }
+  }
+  &__block {
+    padding-inline: 80px;
+    @include onTablet {
+      text-align: center;
+      padding-inline: 0;
+    }
+    @include onPhone {
+      text-align: center;
+      padding-inline: 0;
+    }
+  }
+  &__list {
+    margin-bottom: 14px;
+  }
+}
+.layer {
+  background-color: #172234;
+  opacity: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  height: calc(100vh - 80px);
+}

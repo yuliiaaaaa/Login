@@ -1,0 +1,54 @@
+.deal {
+  width: 630px;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  @include hover(scale, 1.03);
+  @include onTablet {
+    width: 500px;
+  }
+
+  @include onPhone {
+    width: 330px;
+    height: 300px;
+  }
+
+  &__text {
+    font-family: Merriweather;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    color: #ffffff;
+    width: 170px;
+    @include onTablet {
+      width: 130px;
+    }
+    @include onPhone {
+      width: 80px;
+      line-height: 24px;
+      font-size: 14px;
+    }
+  }
+  &__content {
+    position: absolute;
+    bottom: 20px;
+    left: 14px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    &-row {
+      display: flex;
+      gap: 60px;
+      @include onTablet {
+        gap: 40px;
+      }
+      @include onPhone {
+        gap: 30px;
+      }
+    }
+  }
+}

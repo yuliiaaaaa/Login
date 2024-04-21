@@ -1,0 +1,31 @@
+.button {
+  height: 44px;
+  width: 160px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @include onPhone {
+    height: 44px;
+    width: 120px;
+  }
+}
+.login-btn {
+  border: 1px solid $color-button;
+  background-color: $header-color;
+  color: $color-button;
+  @include hover(background-color, #2e4160);
+}
+.signup-btn {
+  background-color: $color-button;
+  color: white;
+  border: 1px solid $header-color;
+  @include hover(background-color, #ead1a7);
+}
+.sign-out-btn {
+  background-color: $color-button;
+  @include hover(background-color, #ead1a7);
+}

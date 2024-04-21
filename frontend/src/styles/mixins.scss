@@ -1,0 +1,31 @@
+@mixin hover($property, $value) {
+  transition: #{$property} $transition-time ease;
+  &:hover {
+    #{$property}: $value;
+  }
+}
+
+@mixin focus($property, $value) {
+  transition: #{$property} $transition-time ease;
+  &:focus {
+    #{$property}: $value;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 481px) and (max-width: 1050px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1051px) and (max-width: 1280px) {
+    @content;
+  }
+}

@@ -1,0 +1,32 @@
+.not-found {
+  &__title-image {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    @include onPhone {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    width: 400px;
+    height: 400px;
+
+    @include onPhone {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  &__content {
+    margin: 40px 0;
+  }
+  &__link {
+    text-decoration: none;
+    color: #313237;
+  }
+}

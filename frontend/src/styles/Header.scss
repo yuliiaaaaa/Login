@@ -1,0 +1,26 @@
+.header {
+  background-color: $header-color;
+  height: 80px;
+  box-shadow: 0px 10px 40px 0px #0000000f;
+  box-shadow: 0px 2px 10px 0px #0000001a;
+
+  &__buttons {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    padding-right: 80px;
+    align-items: center;
+    @include onPhone {
+      padding-right: 0;
+      justify-content: center;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: end;
+    padding-right: 80px;
+    align-items: center;
+    height: 100%;
+  }
+}
