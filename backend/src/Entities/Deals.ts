@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('deals')
-export class Deal {
+class Deals {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -26,3 +26,4 @@ export class Deal {
   @Column({ type: 'int' })
   summ: number;
 }
+export default Deals;
