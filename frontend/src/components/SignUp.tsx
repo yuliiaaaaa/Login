@@ -56,10 +56,13 @@ export const SignUp = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5000/auth/signup', {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://login-8-gu10.onrender.com/auth/signup",
+        {
+          email,
+          password,
+        }
+      );
       const token = response.data.token;
 
       localStorage.setItem(

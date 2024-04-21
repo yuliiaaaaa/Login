@@ -62,10 +62,13 @@ export const LogIn = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5000/auth/login', {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://login-8-gu10.onrender.com/auth/login",
+        {
+          email,
+          password,
+        }
+      );
       const token = response.data.token;
 
       localStorage.setItem(
@@ -92,9 +95,12 @@ export const LogIn = () => {
     setLoading(true);
     setError('');
     try {
-      await axios.post('http://localhost:5000/auth/forgot-password', {
-        email,
-      });
+      await axios.post(
+        "https://login-8-gu10.onrender.com/auth/forgot-password",
+        {
+          email,
+        }
+      );
       setError('Reset password email sent successfully');
     } catch (err) {
       setError('Failed to send reset password email');

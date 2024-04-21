@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const BASE_URL = 'http://localhost:5000';
+export const BASE_URL = "https://login-8-gu10.onrender.com";
 
 export const fetchDeals = async (url: string) => {
   try {
