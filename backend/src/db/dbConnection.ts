@@ -16,6 +16,9 @@ import Deals from 'src/Entities/Deals';
         entities: [User, Deals],
         synchronize: false,
         logging: false,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       }),
     }),
   ],
