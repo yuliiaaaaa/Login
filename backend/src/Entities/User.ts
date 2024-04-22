@@ -12,7 +12,7 @@ class User {
   password: string;
 
   @Column({ nullable: true })
-  resetToken: string;
+  resettoken: string;
 }
 
 export default User;

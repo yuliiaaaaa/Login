@@ -52,9 +52,9 @@ export class UsersService {
 
   async setResetPasswordToken(
     userId: string,
-    resetToken: string,
+    resettoken: string,
   ): Promise<void> {
-    await this.usersRepository.update(userId, { resetToken });
+    await this.usersRepository.update(userId, { resettoken });
   }
 
   async findByEmail(email: string) {
@@ -70,7 +70,7 @@ export class UsersService {
   }
 
   async findByResetToken(token: string): Promise<User | undefined> {
-    return this.usersRepository.findOne({ where: { resetToken: token } });
+    return this.usersRepository.findOne({ where: { resettoken: token } });
   }
 
   async updatePassword(userId: number, newPassword: string): Promise<void> {
@@ -78,6 +78,6 @@ export class UsersService {
   }
 
   async clearResetToken(userId: number): Promise<void> {
-    await this.usersRepository.update(userId, { resetToken: null });
+    await this.usersRepository.update(userId, { resettoken: null });
   }
 }
