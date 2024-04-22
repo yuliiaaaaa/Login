@@ -63,7 +63,7 @@ export const LogIn = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://login-8-gu10.onrender.com/auth/login",
+        "https://login-9.onrender.com/auth/login",
         {
           email,
           password,
@@ -95,12 +95,9 @@ export const LogIn = () => {
     setLoading(true);
     setError('');
     try {
-      await axios.post(
-        "https://login-8-gu10.onrender.com/auth/forgot-password",
-        {
-          email,
-        }
-      );
+      await axios.post("https://login-9.onrender.com/auth/forgot-password", {
+        email,
+      });
       setError('Reset password email sent successfully');
     } catch (err) {
       setError('Failed to send reset password email');

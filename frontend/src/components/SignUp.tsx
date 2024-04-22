@@ -57,7 +57,7 @@ export const SignUp = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://login-8-gu10.onrender.com/auth/signup",
+        "https://login-9.onrender.com/auth/signup",
         {
           email,
           password,
